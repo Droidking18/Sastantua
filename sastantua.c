@@ -6,12 +6,11 @@
 /*   By: dkaplan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/14 15:22:10 by dkaplan           #+#    #+#             */
-/*   Updated: 2018/02/16 10:07:20 by dkaplan          ###   ########.fr       */
+/*   Updated: 2018/02/16 10:49:50 by dkaplan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_putchar(char c)
 {
@@ -34,7 +33,7 @@ void	ft_line(int i)
 	charc = 0;
 	while (charc < i)
 	{
-		putchar('-');
+		ft_putchar(' ');
 		charc++;
 	}
 }
@@ -49,7 +48,7 @@ void	ft_block(int size, int floor, int width, int step)
 	while (charc < width)
 	{
 		if (charc == 0)
-			putchar('/');
+			ft_putchar('/');
 		else if (charc == width - 1)
 			ft_putchar(92);
 		else
